@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Lore from "@/components/Lore";
 import Gameplay from "@/components/Gameplay";
@@ -12,6 +13,7 @@ import Footer from "@/components/Footer";
 export default function HomePage() {
   return (
     <main>
+      <Header />
       <Hero />
       <Lore />
       <Gameplay />

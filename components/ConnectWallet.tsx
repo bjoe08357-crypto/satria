@@ -1,17 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 export default function ConnectWallet() {
-  const [connected, setConnected] = useState(false);
-
   return (
-    <button
-      onClick={() => setConnected((v) => !v)}
-      className="btn btn-primary text-sm"
-      aria-pressed={connected}
-    >
-      {connected ? "Disconnect" : "Connect Wallet"}
-    </button>
+    <div className="inline-flex">
+      <WalletMultiButton className="btn btn-primary text-sm" />
+    </div>
   );
 }

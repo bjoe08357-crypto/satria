@@ -11,6 +11,7 @@ const TOKEN_ADDRESS = "WPiruZHnXFYHekygLU9C55qB1QFy3DNKsXx1bRZv43Y";
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  // Removed desktop slide-in menu
   const [showToast, setShowToast] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -60,12 +61,12 @@ export default function Header() {
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-1">
               {[
-                { href: "/", label: "Home" },
-                { href: "#lore", label: "Lore" },
-                { href: "#gameplay", label: "Gameplay" },
-                { href: "/stake", label: "Stake" },
-                { href: "https://magiceden.io/", label: "Marketplace", external: true },
-                { href: "/whitepaper.md", label: "Whitepaper" },
+                { href: "#lore", label: "About" },
+                { href: "#tokenomics", label: "Token" },
+                { href: "#gameplay", label: "How It Works" },
+                { href: "#roadmap", label: "Roadmap" },
+                { href: "#marketplace", label: "Marketplace" },
+                { href: "#community", label: "Community" },
               ].map((link) => (
                 <Link
                   key={link.href}
@@ -85,20 +86,13 @@ export default function Header() {
 
             {/* Right Side */}
             <div className="flex items-center gap-3">
-              <motion.button
-                onClick={copyToken}
-                whileHover={{ scale: 1.05, y: -1 }}
-                whileTap={{ scale: 0.95 }}
-                className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-lg btn-ghost text-sm font-semibold"
-                title={TOKEN_ADDRESS}
-              >
-                <span>📋</span>
-                <span className="hidden lg:inline">Copy Token</span>
-              </motion.button>
-              
+              {/* Copy Token removed from header */}
+
               <div className="hidden md:block">
                 <ConnectWallet />
               </div>
+
+              {/* Desktop menu trigger removed */}
 
               {/* Mobile Toggle */}
               <button
@@ -135,14 +129,14 @@ export default function Header() {
                 className="md:hidden overflow-hidden"
               >
                 <div className="py-4 space-y-2">
-                  {[
-                    { href: "/", label: "Home" },
-                    { href: "#lore", label: "Lore" },
-                    { href: "#gameplay", label: "Gameplay" },
-                    { href: "/stake", label: "Stake" },
-                    { href: "https://magiceden.io/", label: "Marketplace ↗", external: true },
-                    { href: "/whitepaper.md", label: "Whitepaper" },
-                  ].map((link) => (
+              {[
+                { href: "#lore", label: "About" },
+                { href: "#tokenomics", label: "Token" },
+                { href: "#gameplay", label: "How It Works" },
+                { href: "#roadmap", label: "Roadmap" },
+                { href: "#marketplace", label: "Marketplace" },
+                { href: "#community", label: "Community" },
+              ].map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
@@ -156,21 +150,14 @@ export default function Header() {
                   <div className="px-4 py-2">
                     <ConnectWallet />
                   </div>
-                  <button
-                    onClick={() => {
-                      copyToken();
-                      setMenuOpen(false);
-                    }}
-                    className="w-full px-4 py-3 rounded-lg text-left text-ink font-semibold hover:bg-white/70 transition-colors"
-                  >
-                    📋 Copy Token Address
-                  </button>
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
       </motion.header>
+
+      {/* Desktop slide-in menu removed */}
 
       {/* Toast */}
       <AnimatePresence>
