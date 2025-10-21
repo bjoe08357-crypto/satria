@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, cubicBezier } from "framer-motion";
 import dynamic from "next/dynamic";
 
 const BackgroundIslands = dynamic(() => import("@/components/BackgroundIslands"), {
@@ -28,7 +28,7 @@ const itemVariants = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: "cubic-bezier(0.16, 1, 0.3, 1)",
+      ease: cubicBezier(0.16, 1, 0.3, 1),
     },
   },
 };

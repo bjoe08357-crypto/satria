@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
 import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -23,7 +23,7 @@ const itemVariants = {
     scale: 1,
     transition: {
       duration: 0.7,
-      ease: "cubic-bezier(0.16, 1, 0.3, 1)",
+      ease: cubicBezier(0.16, 1, 0.3, 1),
     },
   },
 };

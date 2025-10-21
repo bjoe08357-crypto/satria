@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
 import dynamic from "next/dynamic";
 
 const PieChart = dynamic(() => import("recharts").then((mod) => mod.PieChart), { ssr: false });
@@ -26,7 +26,7 @@ const itemVariants = {
     opacity: 1,
     transition: {
       duration: 0.6,
-      ease: "cubic-bezier(0.16, 1, 0.3, 1)",
+      ease: cubicBezier(0.16, 1, 0.3, 1),
     },
   },
 };
