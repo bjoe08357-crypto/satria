@@ -22,14 +22,7 @@ export default function Footer() {
             <a href="/whitepaper.md" className="text-sm text-subink hover:text-primary transition">
               Whitepaper
             </a>
-            <a
-              href="https://github.com/satriatoken"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-subink hover:text-primary transition"
-            >
-              GitHub ↗
-            </a>
+            {/* GitHub link removed */}
           </div>
         </div>
       </div>
