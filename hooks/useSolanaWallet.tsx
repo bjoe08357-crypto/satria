@@ -11,7 +11,7 @@ export function SolanaWalletProviders({ children }: { children: React.ReactNode 
   const wallets = useMemo(() => [new PhantomWalletAdapter(), new SolflareWalletAdapter()], []);
 
   return (
-    <ConnectionProvider endpoint={"https://api.mainnet-beta.solana.com"}>
+    <ConnectionProvider endpoint={process.env.NEXT_PUBLIC_SOLANA_RPC || "https://api.devnet.solana.com"}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>{children}</WalletModalProvider>
       </WalletProvider>

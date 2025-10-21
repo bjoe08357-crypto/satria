@@ -71,7 +71,6 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className={`relative px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
                     pathname === link.href
                       ? "text-primary"
@@ -79,7 +78,6 @@ export default function Header() {
                   }`}
                 >
                   {link.label}
-                  {link.external && <span className="ml-1 text-xs">↗</span>}
                 </Link>
               ))}
             </div>
@@ -141,7 +139,6 @@ export default function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
-                      {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       className="block px-4 py-3 rounded-lg text-ink font-semibold hover:bg-white/70 transition-colors"
                     >
                       {link.label}
