@@ -19,7 +19,7 @@ const itemVariants = {
     opacity: 1,
     transition: {
       duration: 0.7,
-      ease: [0.16, 1, 0.3, 1],
+      ease: "cubic-bezier(0.16, 1, 0.3, 1)",
     },
   },
 };
