@@ -1,0 +1,352 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #F6F7FB;
+    --ink: #1A1C22;
+    --subink: #4B5563;
+    --font-orbitron: 'Orbitron', sans-serif;
+    --font-grotesk: 'Space Grotesk', sans-serif;
+    /* Wallet adapter color overrides */
+    --wallet-bg: linear-gradient(135deg, #FFF4D6 0%, #FFE38A 15%, #FFB200 40%, #FF8C00 65%, #FF6A00 85%, #FF3D6E 100%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html, body {
+    background: var(--bg);
+    background-image: radial-gradient(60% 40% at 20% 0%, rgba(255, 178, 0, 0.18), transparent 60%),
+                      radial-gradient(60% 40% at 80% 20%, rgba(255, 61, 110, 0.12), transparent 60%);
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: var(--font-grotesk);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-orbitron);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  p {
+    line-height: 1.7;
+  }
+}
+
+@layer components {
+  .glass {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 24px rgba(17, 24, 39, 0.06),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 48px;
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    height: 48px;
+    text-shadow: none;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn:hover::before {
+    opacity: 1;
+  }
+
+  .btn:hover::after {
+    opacity: 0.5;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #FFF4D6 0%, #FFE38A 15%, #FFB200 40%, #FF8C00 65%, #FF6A00 85%, #FF3D6E 100%);
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    color: #0D0D0D;
+    font-weight: 700;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset,
+                0 -1px 0 0 rgba(0, 0, 0, 0.1) inset,
+                0 4px 12px rgba(255, 178, 0, 0.25),
+                0 8px 24px rgba(255, 106, 0, 0.2),
+                0 2px 6px rgba(17, 24, 39, 0.08);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    background-position: 100% 50%;
+    border-color: rgba(255, 215, 0, 0.7);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset,
+                0 -1px 0 0 rgba(0, 0, 0, 0.1) inset,
+                0 8px 20px rgba(255, 178, 0, 0.35),
+                0 12px 32px rgba(255, 106, 0, 0.3),
+                0 4px 12px rgba(17, 24, 39, 0.12);
+  }
+
+  .btn-primary:active {
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3) inset,
+                0 2px 4px rgba(0, 0, 0, 0.15) inset,
+                0 2px 8px rgba(255, 178, 0, 0.3);
+  }
+
+  .btn-ghost {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.75) 100%);
+    border: 1.5px solid rgba(17, 24, 39, 0.12);
+    color: var(--ink);
+    font-weight: 600;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.9) inset,
+                0 4px 12px rgba(17, 24, 39, 0.05),
+                0 2px 6px rgba(17, 24, 39, 0.03);
+  }
+
+  .btn-ghost::before {
+    background: radial-gradient(circle at top, rgba(255, 178, 0, 0.12), transparent 60%);
+  }
+
+  .btn-ghost:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 252, 245, 0.9) 100%);
+    border-color: rgba(255, 178, 0, 0.35);
+    color: #FF8C00;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 1) inset,
+                0 6px 16px rgba(17, 24, 39, 0.1),
+                0 2px 8px rgba(255, 178, 0, 0.15);
+  }
+
+  .btn-ghost:active {
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8) inset,
+                0 2px 4px rgba(0, 0, 0, 0.08) inset,
+                0 2px 8px rgba(17, 24, 39, 0.08);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #FFE38A 0%, #FFB200 35%, #FF6A00 70%, #FF3D6E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hairline {
+    background: linear-gradient(90deg, rgba(17, 24, 39, 0.06), rgba(17, 24, 39, 0.12), rgba(17, 24, 39, 0.06));
+    height: 1px;
+    width: 100%;
+  }
+
+  .text-subtle {
+    color: var(--subink);
+  }
+
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 32px rgba(17, 24, 39, 0.12),
+                0 0 32px rgba(255, 178, 0, 0.15);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+    background-size: 200% 100%;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    50% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .shadow-glow-primary {
+    box-shadow: 0 0 24px rgba(255, 178, 0, 0.25);
+  }
+
+  .shadow-glow-hover:hover {
+    box-shadow: 0 0 32px rgba(255, 178, 0, 0.35);
+  }
+
+  /* Button icon animations */
+  .btn:hover .emoji {
+    animation: bounce 0.6s ease-in-out;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-4px) scale(1.1);
+    }
+  }
+
+  /* Solana Wallet Adapter Styling */
+  .wallet-adapter-button {
+    background: linear-gradient(135deg, #FFF4D6 0%, #FFE38A 15%, #FFB200 40%, #FF8C00 65%, #FF6A00 85%, #FF3D6E 100%) !important;
+    background-size: 200% 100% !important;
+    background-position: 0% 50% !important;
+    color: #0D0D0D !important;
+    border: 1px solid rgba(255, 215, 0, 0.5) !important;
+    border-radius: 48px !important;
+    padding: 0.75rem 1.75rem !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    height: 48px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset,
+                0 -1px 0 0 rgba(0, 0, 0, 0.1) inset,
+                0 4px 12px rgba(255, 178, 0, 0.25),
+                0 8px 24px rgba(255, 106, 0, 0.2),
+                0 2px 6px rgba(17, 24, 39, 0.08) !important;
+  }
+
+  .wallet-adapter-button:hover {
+    background-position: 100% 50% !important;
+    border-color: rgba(255, 215, 0, 0.7) !important;
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset,
+                0 -1px 0 0 rgba(0, 0, 0, 0.1) inset,
+                0 8px 20px rgba(255, 178, 0, 0.35),
+                0 12px 32px rgba(255, 106, 0, 0.3),
+                0 4px 12px rgba(17, 24, 39, 0.12) !important;
+  }
+
+  .wallet-adapter-button:active,
+  .wallet-adapter-button:focus {
+    transform: translateY(-1px) scale(1.01) !important;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3) inset,
+                0 2px 4px rgba(0, 0, 0, 0.15) inset,
+                0 2px 8px rgba(255, 178, 0, 0.3) !important;
+  }
+
+  /* Higher specificity overrides for wallet button */
+  button.wallet-adapter-button,
+  button.wallet-adapter-button-trigger {
+    background: linear-gradient(135deg, #FFF4D6 0%, #FFE38A 15%, #FFB200 40%, #FF8C00 65%, #FF6A00 85%, #FF3D6E 100%) !important;
+    color: #0D0D0D !important;
+  }
+
+  /* Modal styling */
+  .wallet-adapter-modal {
+    background: rgba(246, 247, 251, 0.98) !important;
+    backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .wallet-adapter-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+
+  .wallet-adapter-modal-title {
+    color: #1A1C22 !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-weight: 700 !important;
+  }
+
+  .wallet-adapter-modal-middle {
+    background: transparent !important;
+  }
+
+  /* Wallet list items */
+  .wallet-adapter-modal-list button {
+    background: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    color: #1A1C22 !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .wallet-adapter-modal-list button:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 252, 245, 0.9)) !important;
+    border-color: rgba(255, 178, 0, 0.35) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(255, 178, 0, 0.1) !important;
+  }
+
+  /* Override any inline styles from wallet adapter */
+  [style*="background"] .wallet-adapter-button,
+  .wallet-adapter-button[style] {
+    background: linear-gradient(135deg, #FFF4D6 0%, #FFE38A 15%, #FFB200 40%, #FF8C00 65%, #FF6A00 85%, #FF3D6E 100%) !important;
+    color: #0D0D0D !important;
+  }
+}
