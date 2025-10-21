@@ -26,6 +26,7 @@ out/
 
 # TypeScript
 *.tsbuildinfo
+tsconfig.tsbuildinfo
 
 # Environment files
 .env
