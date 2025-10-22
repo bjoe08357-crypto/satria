@@ -16,6 +16,12 @@ export default function Footer() {
             <a href="https://satriatoken.gitbook.io/satria-token/" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
               Whitepaper
             </a>
+            <a href="https://discord.gg/TEbecURY" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
+              Discord
+            </a>
+            <a href="https://x.com/SatriaToken" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
+              X
+            </a>
           </div>
         </div>
       </div>

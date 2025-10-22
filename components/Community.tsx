@@ -31,7 +31,7 @@ export default function Community() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a
-              href="https://discord.gg/satria"
+              href="https://discord.gg/TEbecURY"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -2 }}
@@ -41,7 +41,7 @@ export default function Community() {
               💬 Join Discord
             </motion.a>
             <motion.a
-              href="https://twitter.com/satriatoken"
+              href="https://x.com/SatriaToken"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -2 }}
@@ -50,16 +50,7 @@ export default function Community() {
             >
               🐦 Follow on X
             </motion.a>
-            <motion.a
-              href="https://t.me/satriatoken"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 0 }}
-              className="btn btn-ghost"
-            >
-              ✈️ Telegram
-            </motion.a>
+            {/* Telegram removed */}
           </div>
         </motion.div>
       </div>
