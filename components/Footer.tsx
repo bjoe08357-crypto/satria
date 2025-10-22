@@ -19,7 +19,7 @@ export default function Footer() {
             <a href="/terms" className="text-sm text-subink hover:text-primary transition">
               Terms of Service
             </a>
-            <a href="/whitepaper.md" className="text-sm text-subink hover:text-primary transition">
+            <a href="https://satriatoken.gitbook.io/satria-token/" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
               Whitepaper
             </a>
             {/* GitHub link removed */}

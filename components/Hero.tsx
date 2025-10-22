@@ -134,7 +134,9 @@ export default function Hero() {
           </motion.button>
           
           <motion.a
-            href="/whitepaper.md"
+            href="https://satriatoken.gitbook.io/satria-token/"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95, y: 0 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
