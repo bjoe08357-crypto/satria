@@ -13,16 +13,9 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <a href="/privacy" className="text-sm text-subink hover:text-primary transition">
-              Privacy Policy
-            </a>
-            <a href="/terms" className="text-sm text-subink hover:text-primary transition">
-              Terms of Service
-            </a>
             <a href="https://satriatoken.gitbook.io/satria-token/" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
               Whitepaper
             </a>
-            {/* GitHub link removed */}
           </div>
         </div>
       </div>
