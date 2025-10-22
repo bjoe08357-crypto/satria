@@ -1,11 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useRef, Suspense } from "react";
-import dynamic from "next/dynamic";
-import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-
-const FeatureScene = dynamic(() => import("./FeatureScene"), { ssr: false });
+import { useEffect, useRef } from "react";
 
 interface Feature {
   id: string;
@@ -22,7 +18,6 @@ interface FeatureModalProps {
 }
 
 export default function FeatureModal({ open, onClose, feature }: FeatureModalProps) {
-  const reduced = usePrefersReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
 
@@ -71,13 +66,16 @@ export default function FeatureModal({ open, onClose, feature }: FeatureModalPro
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
             <div className="grid md:grid-cols-2 max-h-[80vh] md:max-h-[600px] overflow-hidden">
-              {/* 3D Scene or Gradient */}
-              <div className="relative aspect-video md:aspect-auto bg-gradient-to-br from-[#FFE38A] via-[#FFB200] to-[#FF6A00] hidden md:flex items-center justify-center">
-                {!reduced && (
-                  <Suspense fallback={<div className="text-white/50">Loading...</div>}>
-                    <FeatureScene id={feature.id} />
-                  </Suspense>
-                )}
+              {/* Image only */}
+              <div className="relative aspect-video md:aspect-auto hidden md:flex items-center justify-center overflow-hidden">
+                <img
+                  alt={feature.title}
+                  src={`/features/${feature.id}.jpg`}
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = `/features/${feature.id}.png`;
+                  }}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
               </div>
 
               {/* Content Panel */}
