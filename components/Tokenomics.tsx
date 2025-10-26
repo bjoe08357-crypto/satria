@@ -145,7 +145,7 @@ export default function Tokenomics() {
           >
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 text-subink font-semibold text-sm md:text-base">
               <div>
-                Total Supply: <span className="text-primary font-bold">100,000,000 $SATRIA</span>
+                Total Supply: <span className="text-primary font-bold">100,000,000 $GNCO</span>
               </div>
               <div className="hidden sm:block w-px h-6 bg-black/10" />
               <div>

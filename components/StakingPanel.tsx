@@ -28,7 +28,7 @@ export default function StakingPanel() {
         </motion.div>
         
         <h2 className="font-[var(--font-orbitron)] text-4xl font-bold mb-3">
-          <span className="text-gradient">Stake $SATRIA</span>
+          <span className="text-gradient">Stake $GNCO</span>
         </h2>
         <p className="text-subink text-base leading-relaxed">
           Lock your tokens to earn rewards and support the ecosystem.
@@ -51,7 +51,7 @@ export default function StakingPanel() {
               className="w-full p-4 pr-24 rounded-xl bg-white/60 border-2 border-black/10 focus:border-primary focus:ring-4 focus:ring-primary/20 text-ink font-bold text-lg transition-all outline-none"
             />
             <div className="absolute right-4 top-1/2 -translate-y-1/2 text-subink font-bold">
-              $SATRIA
+              $GNCO
             </div>
           </div>
         </div>

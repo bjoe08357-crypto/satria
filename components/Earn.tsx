@@ -12,7 +12,7 @@ const fadeUp = {
 };
 
 const earnMethods = [
-  { title: "Battle Rewards", desc: "Earn $SATRIA by winning PvP and PvE battles.", icon: "⚔️" },
+  { title: "Battle Rewards", desc: "Earn $GNCO by winning PvP and PvE battles.", icon: "⚔️" },
   { title: "NFT Marketplace", desc: "Trade heroes and items for profit.", icon: "🛒" },
   { title: "Land Yield", desc: "Generate passive income from owned islands.", icon: "🌾" },
   { title: "Guild Rewards", desc: "Share in your guild's conquest victories.", icon: "🏆" },
@@ -36,7 +36,7 @@ export default function Earn() {
             Earn Model
           </h2>
           <p className="text-lg text-subink max-w-3xl mx-auto leading-relaxed">
-            Multiple pathways to earn $SATRIA tokens and build your wealth in the archipelago.
+            Multiple pathways to earn $GNCO tokens and build your wealth in the archipelago.
           </p>
         </motion.div>
 

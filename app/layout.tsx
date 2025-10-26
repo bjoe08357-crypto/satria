@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
-  title: "SATRIA",
-  description: "SATRIA - Next.js app",
+  title: "GANCHO TOKEN",
+  description: "GANCHO TOKEN - Empire of Gancho",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

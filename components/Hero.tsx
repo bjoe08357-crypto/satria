@@ -73,7 +73,7 @@ export default function Hero() {
         <motion.div variants={itemVariants} className="mb-8">
           <motion.img
             src="/assets/ganchologotrans.png"
-            alt="SATRIA Emblem"
+            alt="Empire of Gancho Emblem"
             className="w-20 h-20 md:w-28 md:h-28 mx-auto drop-shadow-[0_0_30px_rgba(255,178,0,0.4)] animate-float"
             whileHover={{ scale: 1.05, rotate: 5 }}
             transition={{ type: "spring", stiffness: 300 }}
