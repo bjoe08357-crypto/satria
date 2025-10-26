@@ -149,11 +149,7 @@ export default function Tokenomics() {
               </div>
               <div className="hidden sm:block w-px h-6 bg-black/10" />
               <div>
-                Initial: <span className="text-primary font-bold">$0.10</span>
-              </div>
-              <div className="hidden sm:block w-px h-6 bg-black/10" />
-              <div>
-                Network: <span className="text-primary font-bold">Solana (SPL)</span>
+                Network: <span className="text-primary font-bold">Eth</span>
               </div>
             </div>
           </motion.div>
