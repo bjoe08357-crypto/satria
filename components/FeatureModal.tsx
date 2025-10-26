@@ -124,7 +124,7 @@ export default function FeatureModal({ open, onClose, feature }: FeatureModalPro
                   {/* CTAs */}
                   <div className="flex flex-wrap gap-2 mt-6 pt-4 border-t border-black/10">
                     <a
-                      href="https://satriatoken.gitbook.io/satria-token/"
+                      href="https://ganchotoken.gitbook.io/gancho-token/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-primary text-sm py-2"

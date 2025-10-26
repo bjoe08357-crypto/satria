@@ -132,7 +132,7 @@ export default function Hero() {
           </motion.button>
           
           <motion.a
-            href="https://satriatoken.gitbook.io/satria-token/"
+            href="https://ganchotoken.gitbook.io/gancho-token/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, y: -2 }}
