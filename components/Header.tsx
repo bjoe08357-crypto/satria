@@ -48,7 +48,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
               <motion.img
-                src="/assets/garuda-logo.png"
+                src="/assets/ganchologotrans.png"
                 alt="SATRIA"
                 className="w-9 h-9 transition-transform duration-300 drop-shadow-md"
                 whileHover={{ scale: 1.1, rotate: 5 }}

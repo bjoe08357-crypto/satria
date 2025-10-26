@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Copyright */}
           <div className="flex items-center gap-3">
-            <img src="/assets/garuda-logo.png" alt="SATRIA" className="w-6 h-6" />
+            <img src="/assets/ganchologotrans.png" alt="SATRIA" className="w-6 h-6" />
             <span className="text-subink text-sm">© 2025 SATRIA Token. All rights reserved.</span>
           </div>
 
