@@ -7,8 +7,17 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Copyright */}
           <div className="flex items-center gap-3">
-            <img src="/assets/ganchologotrans.png" alt="SATRIA" className="w-6 h-6" />
-            <span className="text-subink text-sm">© 2025 SATRIA Token. All rights reserved.</span>
+            <img src="/assets/ganchologotrans.png" alt="Empire of Gancho" className="w-6 h-6" />
+            <div className="text-subink text-sm">
+              <div>Empire of Gancho © 2025</div>
+              <div>Powered by Ganco Token ($GNCO)</div>
+              <div>All rights reserved.</div>
+              <div>
+                <a href="https://empireofgancho.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">empireofgancho.com</a>
+                <span className="mx-2">|</span>
+                <a href="https://ganchotoken.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">ganchotoken.com</a>
+              </div>
+            </div>
           </div>
 
           {/* Links */}
@@ -28,3 +37,4 @@ export default function Footer() {
     </footer>
   );
 }
+

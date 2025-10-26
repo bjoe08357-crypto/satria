@@ -29,51 +29,51 @@ const fadeUp = {
 const features = [
   {
     id: "build",
-    title: "Build & Expand",
-    short: "Construct your kampung and fortify your warriors.",
-    desc: "Forge your kampung into a thriving fortress. Construct legendary forges, train warriors, and expand your dominion across the isles.",
+    title: "1 · Build & Conquer",
+    short: "Rise from the ruins and forge your stronghold.",
+    desc: "Rise from the ashes of the old realm and establish your stronghold in the world of Gancho. Construct your fortress, upgrade your kingdom’s infrastructure, train your armies and expand your territory. Every decision — from resource allocation to city layout — influences your power in the realm and your access to $GNCO rewards.",
     icon: "🏗️",
-    bullets: ["Resource buildings & upgrades", "Training grounds & buffs", "Defensive structures & traps"],
+    bullets: ["Design and upgrade your citadel", "Defend with walls, towers, and traps", "Strategize resource allocation"],
   },
   {
     id: "pvp",
-    title: "PvP Battles",
-    short: "Challenge rival clans in epic tournaments.",
-    desc: "Engage in cross-clan tournaments with real-time strategy. Earn $SATRIA and ascend the global leaderboards of the Archipelago.",
+    title: "2 · Epic PvP Wars",
+    short: "Challenge rival houses in tactical, real-time battles.",
+    desc: "Clash with rival houses in large-scale, strategic real-time battles that determine control over territories. Master formations, plan your timing, command your heroes — victory earns prestige, loot, and $GNCO. Dominate the map, influence global leaderboards, and forge your legacy.",
     icon: "⚔️",
-    bullets: ["Ranked ladder & seasons", "Wagered duels (custodied)", "Esports-ready lobbies"],
+    bullets: ["Territory control and sieges", "$GNCO rewards for victories", "Seasonal leaderboards"],
   },
   {
     id: "heroes",
-    title: "NFT Heroes",
-    short: "Collect legendary Satrias with divine relics.",
-    desc: "Summon mythical Satrias — each forged with divine relics and evolving abilities. Fuse, upgrade, and trade them in the open market.",
+    title: "3 · Legendary Hero NFTs",
+    short: "Recruit champions of myth with unique skills.",
+    desc: "Summon, collect and empower legendary heroes—each a unique NFT with distinct abilities, lore and on-chain provenance. From the Radiant Warden to the Shadow Archon, your hero roster is an asset. Upgrade gear, warp the battlefield, trade heroes for profit — all within the $GNCO-powered ecosystem.",
     icon: "🛡️",
-    bullets: ["Evolutions & fusion", "Relic sockets & sets", "Marketplace trading & rental"],
+    bullets: ["Unique NFT heroes with skills", "Equipment, training, and evolution", "Tradable, ownable, and upgradable"],
   },
   {
     id: "land",
-    title: "Land Ownership",
-    short: "Acquire sacred islands to establish dominion.",
-    desc: "Acquire sacred islands blessed by the Garuda. Develop them into strongholds generating resources, relics, and influence.",
+    title: "4 · Territory Ownership & Economy",
+    short: "Acquire NFT lands that generate resources and taxes.",
+    desc: "Acquire NFT-based lands and domains that generate resources, taxes and strategic benefits for your house. Whether you command coastal strongholds, volcanic fortresses or merchant hubs, your territory is your asset. Build trade routes, extract resources and reinvest in the war effort—all tuned to the economy of Empire of Gancho.",
     icon: "🏝️",
-    bullets: ["Island rarities & biomes", "Production modifiers", "Guild taxation zones"],
+    bullets: ["Land rarities and biomes", "Production and taxation systems", "Trade networks and upgrades"],
   },
   {
     id: "guilds",
-    title: "Guild Alliances",
-    short: "Form alliances and wage epic wars.",
-    desc: "Join powerful clans, form alliances, and wage epic wars for the Crown of Garuda. Strategy, unity, and loyalty decide the realm.",
+    title: "5 · Guild Alliances & Realm Wars",
+    short: "Unite to wage massive wars for relics and regions.",
+    desc: "Join or forge powerful guild alliances to wage war for relics, map zones and relic control. Coordinate strategy with your house members, redefine global meta, and earn shared rewards in $GNCO. The stronger your guild and the more coordinated, the greater your influence on the world’s narrative.",
     icon: "🤝",
-    bullets: ["Alliance tech tree", "War campaigns & sieges", "Shared treasuries & payouts"],
+    bullets: ["Alliance mechanics and campaigns", "Sieges, relics, and payouts", "Coordinated large-scale warfare"],
   },
   {
     id: "creator",
-    title: "Creator Hub",
-    short: "Design skins and earn royalties.",
-    desc: "Design custom skins, items, and experiences. Earn royalties through an on-chain creator economy powered by $SATRIA.",
+    title: "6 · Creator & Marketplace Hub",
+    short: "Mint skins, relics, and structures as NFTs.",
+    desc: "Empower the community with a built-in Creator Hub where artists, designers and modders can mint skins, relics, and hero variants. Every piece is an NFT, tradeable in the marketplace using $GNCO. Earn royalties from your designs, support your favourite creators and build a thriving meta-economy around Empire of Gancho.",
     icon: "🎨",
-    bullets: ["On-chain royalties", "Creator quests & passes", "Community curation & ratings"],
+    bullets: ["On-chain royalties", "Creator curation and ratings", "Ecosystem marketplace integrations"],
   },
 ];
 
@@ -117,7 +117,7 @@ export default function Gameplay() {
             variants={fadeUp}
             className="text-base md:text-lg text-subink max-w-3xl mx-auto leading-relaxed"
           >
-            Immerse yourself in strategic battles, build your empire, and forge lasting alliances in the world of SATRIA.
+            Immerse yourself in strategic battles, build your empire, and forge lasting alliances in the Empire of Gancho.
           </motion.p>
         </motion.div>
 

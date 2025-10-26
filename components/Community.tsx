@@ -26,8 +26,7 @@ export default function Community() {
             Join the Community
           </h2>
           <p className="text-lg text-subink max-w-3xl mx-auto mb-8 leading-relaxed">
-            Connect with thousands of Satria warriors, share strategies, participate in events, and shape the future of
-            the archipelago together.
+            Join thousands of warriors shaping the future of Gancho. Stay updated on tournaments, NFT mints, and game events.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a

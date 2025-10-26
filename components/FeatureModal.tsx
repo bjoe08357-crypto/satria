@@ -131,16 +131,6 @@ export default function FeatureModal({ open, onClose, feature }: FeatureModalPro
                     >
                       📄 View Whitepaper
                     </a>
-                    {(feature.id === "heroes" || feature.id === "land" || feature.id === "creator") && (
-                      <a
-                        href="https://magiceden.io/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-ghost text-sm py-2"
-                      >
-                        🛍️ Marketplace
-                      </a>
-                    )}
                     <button onClick={onClose} className="btn btn-ghost text-sm py-2 ml-auto">
                       ✕ Close
                     </button>

@@ -24,24 +24,21 @@ const itemVariants = {
   },
 };
 
-const tribes = [
+const houses = [
   {
-    name: "Garuda",
-    desc: "Sky warriors wielding divine wind and thunder, soaring above the archipelago with unmatched grace.",
-    icon: "🦅",
+    name: "🜂 Solarin",
+    desc: "Lords of Light and Honor. Radiant champions who command the power of the sun. They believe in divine order and justice, restoring the empire through law, discipline, and sacred fire. Their armies march under banners of gold, carrying both faith and flame into battle.",
     gradient: "from-amber-400 to-orange-500",
   },
   {
-    name: "Dewi",
-    desc: "Mystic guardians blessed with healing and light, protectors of ancient wisdom and sacred temples.",
-    icon: "✨",
-    gradient: "from-pink-400 to-rose-500",
+    name: "Dravarn",
+    desc: "Warriors of Flame and Steel. Forged in the crucible of war, the Dravarn thrive on conquest. They honor strength above all, believing peace is born only from power. Their forges never cool, their blades never rest — every battle is a chance for glory.",
+    gradient: "from-red-500 to-rose-600",
   },
   {
-    name: "Naga",
-    desc: "Earth defenders commanding fire and stone, guardians of the underground realms and volcanoes.",
-    icon: "🐉",
-    gradient: "from-emerald-400 to-teal-500",
+    name: "Noctara",
+    desc: "Mystics of Shadow and Fate. Masters of deception and forbidden knowledge. They weave destiny from the unseen corners of the realm, manipulating events to maintain balance — or chaos. Their influence spreads silently through spies, assassins, and ancient sorcery.",
+    gradient: "from-indigo-500 to-purple-600",
   },
 ];
 
@@ -60,14 +57,13 @@ export default function Lore() {
             variants={itemVariants}
             className="font-[var(--font-orbitron)] text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
           >
-            <span className="text-gradient">The Awakening of the Satrias</span>
+            <span className="text-gradient">The Rise of the Three Great Houses</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-sm md:text-base text-subink max-w-3xl mx-auto leading-relaxed"
           >
-            When the Isles of Garuda fell into shadow, the gods awakened the Satrias — tribes of Garuda, Dewi, and Naga
-            — to reclaim ancient relics and restore the Crown of Garuda.
+            When the Empire of Gancho collapsed, chaos filled the realm. From the ruins emerged three great Houses — each sworn to rebuild the world in their own image. Their eternal struggle for the Throne of Dominion will decide the fate of the empire.
           </motion.p>
         </motion.div>
 
@@ -78,36 +74,29 @@ export default function Lore() {
           variants={containerVariants}
           className="grid md:grid-cols-3 gap-6"
         >
-          {tribes.map((tribe) => (
+          {houses.map((house) => (
             <motion.div
-              key={tribe.name}
+              key={house.name}
               variants={itemVariants}
               whileHover={{ y: -4, scale: 1.01 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="glass rounded-2xl overflow-hidden card-hover group relative"
             >
               {/* Top Color Bar */}
-              <div className={`h-1.5 w-full bg-gradient-to-r ${tribe.gradient}`} />
+              <div className={`h-1.5 w-full bg-gradient-to-r ${house.gradient}`} />
               
               {/* Card Content */}
               <div className="p-6 relative z-10">
-                <motion.div
-                  className="text-5xl mb-4 inline-block"
-                  whileHover={{ scale: 1.15, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  {tribe.icon}
-                </motion.div>
                 <h3 className="font-[var(--font-orbitron)] text-xl font-bold mb-3 text-ink group-hover:text-gradient transition-all duration-300">
-                  {tribe.name}
+                  {house.name}
                 </h3>
                 <p className="text-sm md:text-base text-subink leading-relaxed">
-                  {tribe.desc}
+                  {house.desc}
                 </p>
               </div>
               
               {/* Hover Glow Background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${tribe.gradient} opacity-0 group-hover:opacity-3 transition-opacity duration-500 pointer-events-none`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${house.gradient} opacity-0 group-hover:opacity-3 transition-opacity duration-500 pointer-events-none`} />
             </motion.div>
           ))}
         </motion.div>

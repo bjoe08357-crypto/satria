@@ -49,12 +49,12 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <motion.img
                 src="/assets/ganchologotrans.png"
-                alt="SATRIA"
+                alt="Empire of Gancho"
                 className="w-9 h-9 transition-transform duration-300 drop-shadow-md"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               />
               <span className="font-[var(--font-orbitron)] text-xl font-bold tracking-wider text-ink group-hover:text-gradient transition-all duration-300">
-                SATRIA
+                $GNCO
               </span>
             </Link>
 
@@ -65,7 +65,6 @@ export default function Header() {
                 { href: "#tokenomics", label: "Token" },
                 { href: "#gameplay", label: "How It Works" },
                 { href: "#roadmap", label: "Roadmap" },
-                { href: "#marketplace", label: "Marketplace" },
                 { href: "#community", label: "Community" },
               ].map((link) => (
                 <Link
@@ -132,7 +131,6 @@ export default function Header() {
                 { href: "#tokenomics", label: "Token" },
                 { href: "#gameplay", label: "How It Works" },
                 { href: "#roadmap", label: "Roadmap" },
-                { href: "#marketplace", label: "Marketplace" },
                 { href: "#community", label: "Community" },
               ].map((link) => (
                     <Link

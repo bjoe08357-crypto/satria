@@ -86,8 +86,7 @@ export default function Hero() {
           className="font-[var(--font-orbitron)] text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
         >
           <span className="text-gradient inline-block">
-            Rise of the
-            <br className="md:hidden" /> Archipelago Warriors
+            Step into a world where ambition, warfare, and destiny collide.
           </span>
         </motion.h1>
 
@@ -97,7 +96,7 @@ export default function Hero() {
           className="text-base md:text-lg font-semibold mb-3 text-ink tracking-wide"
           style={{ fontFamily: 'var(--font-grotesk)' }}
         >
-          Bangkitkan Semangat Satria Nusantara.
+          Empire of Gancho is a Web3 strategy RPG where every battle, alliance, and victory reshapes the realm — and your fortune.
         </motion.p>
 
         {/* Body */}
@@ -105,8 +104,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-sm md:text-base text-subink max-w-3xl mx-auto mb-8 leading-relaxed"
         >
-          A cinematic play-and-earn world where Indonesia&apos;s ancient heroes rise on Solana. 
-          Build your empire, collect legendary warriors, and claim the Crown of Garuda.
+          Backed by the power of $GNCO, the token that fuels this empire of endless conquest.
         </motion.p>
 
         {/* CTAs */}

@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Lore from "@/components/Lore";
 import Gameplay from "@/components/Gameplay";
 import Tokenomics from "@/components/Tokenomics";
-import Marketplace from "@/components/Marketplace";
 import Earn from "@/components/Earn";
 import Technology from "@/components/Technology";
 import Roadmap from "@/components/Roadmap";
@@ -18,7 +17,6 @@ export default function HomePage() {
       <Lore />
       <Gameplay />
       <Tokenomics />
-      <Marketplace />
       <Earn />
       <Technology />
       <Roadmap />
