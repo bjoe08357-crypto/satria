@@ -26,7 +26,7 @@ const itemVariants = {
 
 const houses = [
   {
-    name: "🜂 Solarin",
+    name: "Solarin",
     desc: "Lords of Light and Honor. Radiant champions who command the power of the sun. They believe in divine order and justice, restoring the empire through law, discipline, and sacred fire. Their armies march under banners of gold, carrying both faith and flame into battle.",
     gradient: "from-amber-400 to-orange-500",
   },
