@@ -186,9 +186,9 @@ export default function Hero() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.8, y: 50 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50"
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[92vw] max-w-md"
             >
-              <div className="glass rounded-3xl p-12 max-w-md text-center shadow-2xl border-2 border-primary/20">
+              <div className="glass rounded-3xl p-8 md:p-12 text-center shadow-2xl border-2 border-primary/20 max-h-[85vh] overflow-auto">
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
@@ -215,7 +215,7 @@ export default function Hero() {
                   transition={{ delay: 0.4 }}
                   className="text-subink text-lg leading-relaxed mb-8"
                 >
-                  The SATRIA game demo is currently in development. Stay tuned for an epic gaming experience!
+                  The Empire of Gancho game demo is currently in development. Stay tuned for an epic gaming experience!
                 </motion.p>
                 
                 <motion.button
