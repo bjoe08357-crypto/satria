@@ -14,6 +14,7 @@ export default function Header() {
   // Removed desktop slide-in menu
   const [showToast, setShowToast] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showStaking, setShowStaking] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,6 +80,12 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
+              <button
+                onClick={() => setShowStaking(true)}
+                className="relative px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 text-ink hover:text-primary hover:bg-white/50"
+              >
+                Staking
+              </button>
             </div>
 
             {/* Right Side */}
@@ -142,6 +149,12 @@ export default function Header() {
                       {link.label}
                     </Link>
                   ))}
+                  <button
+                    onClick={() => { setMenuOpen(false); setShowStaking(true); }}
+                    className="block w-full text-left px-4 py-3 rounded-lg text-ink font-semibold hover:bg-white/70 transition-colors"
+                  >
+                    Staking
+                  </button>
                   <div className="px-4 py-2">
                     <ConnectWallet />
                   </div>
@@ -168,6 +181,63 @@ export default function Header() {
               <span className="text-lg">✓</span>
               Token address copied!
             </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Staking Modal */}
+      <AnimatePresence>
+        {showStaking && (
+          <motion.div
+            className="fixed inset-0 z-[80] bg-black/40 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowStaking(false)}
+          >
+            <motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="staking-title"
+              onClick={(e) => e.stopPropagation()}
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-xl glass rounded-3xl p-8 border border-black/10 shadow-2xl"
+              initial={{ y: 30, opacity: 0, scale: 0.95 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              exit={{ y: 20, opacity: 0, scale: 0.95 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            >
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <div>
+                  <h3 id="staking-title" className="font-[var(--font-orbitron)] text-2xl md:text-3xl font-bold">
+                    <span className="text-gradient">Staking — Coming Soon</span>
+                  </h3>
+                  <div className="h-1 w-16 bg-gradient-to-r from-[#FFB200] to-[#FF6A00] rounded-full mt-2" />
+                </div>
+                <button
+                  onClick={() => setShowStaking(false)}
+                  className="p-2 hover:bg-black/5 rounded-lg transition-colors"
+                  aria-label="Close"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <p className="text-[#1A1C22]/80 leading-relaxed mb-4">
+                Stake $GNCO to earn rewards and strengthen the Empire of Gancho economy. Launching soon on Eth.
+              </p>
+              <ul className="space-y-2 text-[#1A1C22]/80 mb-6">
+                <li className="flex gap-2"><span className="text-primary font-bold">•</span> Lock or flexible staking options</li>
+                <li className="flex gap-2"><span className="text-primary font-bold">•</span> Reward epochs and compounding claims</li>
+                <li className="flex gap-2"><span className="text-primary font-bold">•</span> Non-custodial smart contracts</li>
+                <li className="flex gap-2"><span className="text-primary font-bold">•</span> Boosts for guild participation and events</li>
+              </ul>
+
+              <div className="flex flex-wrap gap-2 justify-end">
+                <button onClick={() => setShowStaking(false)} className="btn btn-ghost">Close</button>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
