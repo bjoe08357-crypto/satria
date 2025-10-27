@@ -189,7 +189,7 @@ export default function Header() {
       <AnimatePresence>
         {showStaking && (
           <motion.div
-            className="fixed inset-0 z-[80] bg-black/40 backdrop-blur-sm"
+            className="fixed inset-0 z-[80] bg-black/40 backdrop-blur-sm flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -200,7 +200,7 @@ export default function Header() {
               aria-modal="true"
               aria-labelledby="staking-title"
               onClick={(e) => e.stopPropagation()}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-xl glass rounded-3xl p-6 md:p-8 border border-black/10 shadow-2xl max-h-[85vh] overflow-auto"
+              className="w-full max-w-xl glass rounded-3xl p-6 md:p-8 border border-black/10 shadow-2xl max-h-[85vh] overflow-auto"
               initial={{ y: 30, opacity: 0, scale: 0.95 }}
               animate={{ y: 0, opacity: 1, scale: 1 }}
               exit={{ y: 20, opacity: 0, scale: 0.95 }}
