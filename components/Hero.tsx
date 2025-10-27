@@ -8,7 +8,7 @@ const BackgroundIslands = dynamic(() => import("@/components/BackgroundIslands")
   ssr: false,
 });
 
-const TOKEN_ADDRESS = "WPiruZHnXFYHekygLU9C55qB1QFy3DNKsXx1bRZv43Y";
+const TOKEN_ADDRESS = "0x8b91b90307608278Db5ad4D8b1b6878C1702a0dE";
 
 const containerVariants = {
   hidden: { opacity: 0 },

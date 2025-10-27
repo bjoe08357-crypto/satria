@@ -184,7 +184,7 @@ npm run build
 
 ## 📝 Token Information
 
-- **Token Address**: `WPiruZHnXFYHekygLU9C55qB1QFy3DNKsXx1bRZv43Y`
+- **Token Address**: `0x8b91b90307608278Db5ad4D8b1b6878C1702a0dE`
 - **Network**: Solana (SPL)
 - **Total Supply**: 100,000,000 $SATRIA
 - **Initial Price**: $0.10
