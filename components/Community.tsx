@@ -30,7 +30,7 @@ export default function Community() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a
-              href="https://discord.gg/TEbecURY"
+              href="https://discord.gg/hmYvw4dX"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -2 }}

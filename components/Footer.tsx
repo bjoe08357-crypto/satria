@@ -25,7 +25,7 @@ export default function Footer() {
             <a href="https://ganchotoken.gitbook.io/gancho-token/" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
               Whitepaper
             </a>
-            <a href="https://discord.gg/TEbecURY" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
+            <a href="https://discord.gg/hmYvw4dX" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
               Discord
             </a>
             <a href="https://x.com/SatriaToken" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
