@@ -28,7 +28,7 @@ export default function Footer() {
             <a href="https://discord.gg/hmYvw4dX" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
               Discord
             </a>
-            <a href="https://x.com/SatriaToken" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
+            <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" className="text-sm text-subink hover:text-primary transition">
               X
             </a>
           </div>

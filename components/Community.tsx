@@ -40,7 +40,7 @@ export default function Community() {
               💬 Join Discord
             </motion.a>
             <motion.a
-              href="https://x.com/SatriaToken"
+              href="https://x.com/?lang=en"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -2 }}
