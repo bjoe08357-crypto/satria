@@ -109,7 +109,7 @@ export default function Roadmap() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-base md:text-lg text-subink max-w-3xl mx-auto leading-relaxed opacity-70"
           >
-            Our journey from launch to becoming the premier Web3 gaming platform on Solana.
+            Our journey from launch to becoming the premier Web3 gaming platform on Ethereum.
           </motion.p>
         </motion.div>
 
